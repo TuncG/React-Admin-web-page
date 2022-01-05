@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
 import MainHeader from "./components/MainHeader/MainHeader";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AdminPage from "./components/AdminPage/AdminPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,11 +28,17 @@ function App() {
 
   return (
     <React.Fragment>
-      <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
-      <main>
-        {!isLoggedIn && <Login onLogin={loginHandler} />}
-        {isLoggedIn && <Home onLogout={logoutHandler} />}
-      </main>
+      <Router>
+        <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
+        <main>
+          <Routes>
+            <Route path="/AdminP" element={<AdminPage />}>
+              {" "}
+            </Route>
+            <Route path="/Home" element={<Home />}></Route>
+          </Routes>
+        </main>
+      </Router>
     </React.Fragment>
   );
 }
