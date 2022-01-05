@@ -40,7 +40,7 @@ const rows = [
   createData("Gingerbread", 356, 16.0, 49, 3.9),
 ];
 
-const Table = (props) => {
+const CustomizedTables = () => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -71,4 +71,4 @@ const Table = (props) => {
   );
 };
 
-export default Table;
+export default CustomizedTables;
