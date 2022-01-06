@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
+import BasicModal from "../UI/Modal/Modal";
 
-import Card from '../UI/Card/Card';
-import classes from './Home.module.css';
+import Card from "../UI/Card/Card";
+import classes from "./Home.module.css";
 
 const Home = (props) => {
   return (
