@@ -9,11 +9,13 @@ const test = () => {};
 
 const AdminPage = (props) => {
   const [state, setState] = useState(true);
+
+  const stateHandler = () => setState(true);
   return (
     <div>
       <div className={classes["table-margins"]}>
         <Button onClick={() => setState(false)}> Add Row </Button>
-        {state === false && <BasicModal />}
+        {state === false && <BasicModal setState={stateHandler} />}
         <CustomizedTables />
       </div>
     </div>

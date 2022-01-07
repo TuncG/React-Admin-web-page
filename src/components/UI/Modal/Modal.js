@@ -17,17 +17,15 @@ const style = {
 };
 
 const BasicModal = (props) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  if (props.onClick === true) {
-    handleOpen();
-  }
+  const handleClose = () => {
+    setOpen(false);
+    props.setState(true);
+  };
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={open}
         onClose={handleClose}
