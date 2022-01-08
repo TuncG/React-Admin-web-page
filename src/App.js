@@ -35,8 +35,8 @@ function App() {
             <Route path="/AdminP" element={<AdminPage />}>
               {" "}
             </Route>
-            <Route path="/Home" element={<Home />}></Route>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/Home" element={<Home />} />
+            <Route path="/" element={<Home />} />
           </Routes>
         </main>
       </Router>
