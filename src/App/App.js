@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-import Login from "./components/Login/Login";
-import Home from "./components/Home/Home";
-import MainHeader from "./components/MainHeader/MainHeader";
+import Home from "../pages/Home/Home";
+import MainHeader from "../components/MainHeader/MainHeader";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AdminPage from "./components/AdminPage/AdminPage";
+import AdminPage from "../pages/AdminPage/AdminPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

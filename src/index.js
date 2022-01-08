@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AdminPage from "./components/AdminPage/AdminPage";
-import "./index.css";
-import App from "./App";
+import "./css/index.css";
+import App from "./App/App";
 
 ReactDOM.render(
   <App />,
